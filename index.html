@@ -1,0 +1,148 @@
+<html>
+    <head>
+    <title>GUVI</title>    
+    <link rel="icon" href="assets/icon.svg">
+    <link rel="stylesheet" href="scss/style.css" type="text/css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width", initial-scale="1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+    
+    </head>
+    
+    <body>
+        <nav class="navbar navbar-light bg-light">
+                        <a class="navbar-brand" href="#">        
+                                <img src="assets/download.svg" class="d-inline-block align-top" id="icon" alt="">                                        
+                        </a><br>
+                        
+                <div class="header pull-right">
+                        <span for="#switch" id="theme"><b>Light Theme</b></span>
+                        <input type="checkbox" id="switch">
+                        <label for="switch" class="switch-label">
+                                <div class="toggle"></div>
+                        </label>
+                        </div>
+        </nav>
+        <div class="container-fluid wrapper">
+        <div class="container box">
+                <div class="login-container">
+                        <div class="row login-box">
+                                <label class="mx-auto" id="title">Login</label>
+                                        <form method="POST" class="login">
+                                                <div class="form-group">
+                                                  <label for="email">Email</label>
+                                                  <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp" placeholder="Email" required="">
+                                                </div>
+                                                <div class="form-group">
+                                                  <label for="password">Password</label>
+                                                  <input type="password" class="form-control" id="password" name="password" placeholder="Password" required="">
+                                                </div>
+                                                <button type="submit" id="login" class="btn btn-primary">Login</button><br>
+                                                <button class="btn signup btn-primary">Sign Up</button>
+                                              </form>
+                        </div>
+                </div>
+        <div class="register-container">
+            <div class="row login-box1">
+                    <label id="title">Register</label>
+                    <form method="POST" class="register" >
+                            <div class="form-group">
+                              <label for="email">Email</label>
+                              <input type="email" class="form-control" id="emailr" name="emailr" aria-describedby="emailHelp" placeholder="Email" required="">
+                            </div>
+                            <div class="form-group">
+                              <label for="password">Password</label>
+                              <input type="password" class="form-control" id="passwordr" name="passwordr" placeholder="Password" required="">
+                            </div>
+                            <div class="form-group">
+                                    <label for="name">Name</label>
+                                    <input type="text" class="form-control" id="name" name="name" placeholder="Name" required="">
+                            </div>
+                            <div class="form-group">
+                                    <label for="dob">DOB</label>
+                                    <input type="date" class="form-control" id="dob" name="dob" placeholder="DOB" required="">
+                            </div>
+                            <div class="form-group">
+                                    <label for="qualification">Qualification</label>
+                                    <input type="text" class="form-control" id="qualification" name="qualification" placeholder="Qualification" required="">
+                            </div>
+                            <div class="form-group">
+                                    <label for="number">Mobile Number</label>
+                                    <input type="number" class="form-control" id="number"  name="number" placeholder="Mobile Number" required="">
+                            </div>
+
+                            <button type="submit" id="register" class="btn btn-primary">Submit</button><br>
+                            
+                          </form>
+            </div>
+        </div>
+        <div class="container update">
+                        <form method="POST" class="modify" >
+                                        <div class="form-group">
+                                          <label for="email">Email</label>
+                                          <input type="email" class="form-control" id="emailc" name="emailc" aria-describedby="emailHelp" placeholder="Email" required="">
+                                        </div>
+                                        <div class="form-group">
+                                                <label for="name">Name</label>
+                                                <input type="text" class="form-control" id="namec" name="namec" placeholder="Name" required="">
+                                        </div>
+                                        <div class="form-group">
+                                                <label for="dob">DOB</label>
+                                                <input type="date" class="form-control" id="dobc" name="dobc" placeholder="DOB" required="">
+                                        </div>
+                                        <div class="form-group">
+                                                <label for="qualification">Qualification</label>
+                                                <input type="text" class="form-control" id="qualificationc" name="qualificationc" placeholder="Qualification" required="">
+                                        </div>
+                                        <div class="form-group">
+                                                <label for="number">Mobile Number</label>
+                                                <input type="number" class="form-control" id="numberc"  name="numberc" placeholder="Mobile Number" required="">
+                                        </div>
+            
+                                        <button type="submit" id="update" class="btn btn-primary">update</button><br>
+                                        
+                                      </form>
+        </div>
+        <div class="table2 table-responsive">
+                <table id="table" class="table table-striped">
+                      <tbody id="mydata">
+                          <tr>
+                            <th scope="row">Name</th>
+                            <td id="rname">[[name]]</td>
+                            
+                          </tr>
+                          <tr>
+                            <th scope="row">Email</th>
+                            <td id="remail">[[email]]</td>
+                           
+                          </tr>
+                          <tr>
+                            <th scope="row">Date-Of-Birth</th>
+                            <td id="rdob">[[dob]]</td>
+                          
+                          </tr>
+                          <tr>
+                                <th scope="row">Qualification</th>
+                                <td id="rqualification">[[qualification]]</td>
+                               
+                              </tr>
+                              <tr>
+                                <th scope="row">mobile</th>
+                                <td id="rmobile">[[number]]</td>
+                               
+                              </tr>
+                        </tbody>
+                      </table>
+                      <br>
+                      <button type="button" id="edit" class="btn btn-dark">Edit</button><br>
+        </div>
+        </div>
+        </div>
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+        <script src="script.js"></script>
+        <script src="js/jquery.miranda.js"></script>
+    </body>
+
+</html>
